@@ -5,7 +5,11 @@
 #include "triangle.h"
 Triangle::Triangle(double *lengths) {
     for (int i = 0; i < 3; i++) { //set side lengths to the input because the setter requires the other values to be set to change one.
-        sides[i] = lengths[i];
+        if (lengths[i] <= 0) { //The setter will not work correctly if any of the values are not positive.
+            sides[i] = DEFAULT;
+        } else {
+            sides[i] = lengths[i];
+        }
     }
     for (int i = 0; i < 3; i++) { //run the setter to validate
         setSide(i, sides[i]);
