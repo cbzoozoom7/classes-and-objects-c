@@ -15,24 +15,24 @@ Triangle::Triangle(double *lengths) {
         setSide(i, sides[i]);
     }
 };
-double Triangle::setSide(int s, double l) { //sets a side length, given the index of the side & the desired length
-    if (s >= 0 || s <= NUM_SIDES - 1) { //fail if index is invalid
-        double sumOther;
-        if (l <= 0) {
-            sides[s] = DEFAULT;
-        } else {
-            for (int i = 0; i < NUM_SIDES; i++) { //find the sum of the lengths of the other 2 sides
-                sumOther += sides[i];
-            }
-            sumOther -= sides[s];
-            if (l > sumOther || l <= 0) { //If the desired length is longer than the sum, a triangle cannot be formed.
-                sides[s] = sumOther;
-            } else {
-                sides[s] = l;
-            }
+double Triangle::setSide(int s, double l) { //Sets a side length, given the index of the side & the desired length. Returns what the value has been set to.
+    double result;
+    if (s < 0 || s >= NUM_SIDES) { //fail if index is invalid
+        result = -1;
+    } else {
+        double sumOther = 0;
+        for (int i = 0; i < NUM_SIDES; i++) { //find the sum of the lengths of the other 2 sides
+            sumOther += sides[i];
         }
+        sumOther -= sides[s];
+        if (l > sumOther || l <= 0) { //If the desired length is longer than the sum, a triangle cannot be formed.
+            sides[s] = sumOther;
+        } else {
+            sides[s] = l;
+        }
+        result = sides[s];
     }
-    return sides[s];
+    return result;
 }
 void Triangle::printTriangle() {
 
