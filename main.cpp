@@ -4,6 +4,7 @@
 // A box is not a rectangle.
 #include "main.h"
 int main(int argc, char** argv) {
-    Triangle myTriangle1(7.3, 8.8, 9);
+    double scalineLengths[3] = {7.3, 8.8, 9};
+    Triangle myTriangle1(scalineLengths);
     return 0;
 }
