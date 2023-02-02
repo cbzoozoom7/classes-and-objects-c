@@ -6,5 +6,6 @@
 int main(int argc, char** argv) {
     double scalineLengths[3] = {7.3, 8.8, 9};
     Triangle myTriangle1(scalineLengths);
+    myTriangle1.printTriangle();
     return 0;
 }

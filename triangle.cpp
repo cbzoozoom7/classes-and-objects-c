@@ -36,6 +36,6 @@ double Triangle::setSide(int s, double l) { //Sets a side length, given the inde
 }
 void Triangle::printTriangle() {
     for (int i = 0; i < NUM_SIDES; i++) {
-        cout << "Side " << i << ":" << sides[i] << endl;
+        cout << "Side " << i << ": " << sides[i] << endl;
     }
 }
