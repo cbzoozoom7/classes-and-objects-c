@@ -4,4 +4,5 @@
 // A box is not a rectangle.
 #ifndef CLASSES_MAIN
     #define CLASSES_MAIN
+    #include "triangle.h"
 #endif //CLASSES_MAIN
