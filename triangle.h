@@ -19,6 +19,8 @@
             Triangle(double[3]);
             //Setters
             double setSide(int, double); //sets a side length, given the index of the side & the desired length
+            //Getters
+            double getSide (int);
             //Methods
             void print();
         protected:
