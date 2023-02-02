@@ -20,7 +20,7 @@
             //Setters
             double setSide(int, double); //sets a side length, given the index of the side & the desired length
             //Methods
-            void printTriangle();
+            void print();
         protected:
             double sides[3]; //the side lengths of the triangle
     };

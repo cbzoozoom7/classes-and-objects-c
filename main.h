@@ -5,4 +5,5 @@
 #ifndef CLASSES_MAIN
     #define CLASSES_MAIN
     #include "triangle.h"
+    #include <iostream>
 #endif //CLASSES_MAIN
