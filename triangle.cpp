@@ -24,7 +24,6 @@ double Triangle::setSide(int s, double l) { //Sets a side length, given the inde
         for (int i = 0; i < NUM_SIDES; i++) { //find the sum of the lengths of the other 2 sides
             sumOther += sides[i];
         }
-        perimeter = sumOther; //might as well while I have it
         sumOther -= sides[s];
         if (l > sumOther || l <= 0) { //If the desired length is longer than the sum, a triangle cannot be formed.
             sides[s] = sumOther;
@@ -41,9 +40,16 @@ double Triangle::getSide(int s) {
 double Triangle::getArea() {
     return .25*std::sqrt((4*pow(sides[0], 2)*pow(sides[1], 2))-pow((pow(sides[0], 2) + pow(sides[1], 2) - pow(sides[2],2)), 2)); //Heron's formula: 1/4 (4 a^2 b^2 - (a^2 + b^2 - c^2)^2)^(1/2)
 }
+double Triangle::getPerimeter() {
+    double sum = 0;
+    for (int i = 0; i < NUM_SIDES; i++) {
+        sum += sides [i];
+    }
+    return sum;
+}
 void Triangle::print() {
     for (int i = 0; i < NUM_SIDES; i++) {
-        cout << "side " << i << ": " << sides[i] << ", ";
+        cout << "side " << i << ": " << getSide(i) << ", ";
     }
-    cout << endl;
+    cout << "area: " << getArea() << ", perimeter: " << getPerimeter() << endl;
 }

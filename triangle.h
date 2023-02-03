@@ -24,10 +24,10 @@
             //Getters
             double getSide(int);
             double getArea();
+            double getPerimeter();
             //Methods
             void print();
         protected:
             double sides[3]; //the side lengths of the triangle
-            double perimeter;
     };
 #endif //CLASSES_TRIANGLE
