@@ -6,8 +6,9 @@
 RightTriangle::RightTriangle(double *legs) {
     //Pointers are not slay U_U
     for (int i = 0; i < NUM_LEGS; i++) {
-        sides[i] = 1;
+        sides[i] = DEFAULT;
     }
+    sides[NUM_SIDES - 1] = sqrt(2);
     for (int i = 0; i < NUM_LEGS; i++) {
         setSide(i, legs[i]);
     }
@@ -23,7 +24,7 @@ double RightTriangle::setSide(int s, double l) {
             for (int i = 0; i < NUM_LEGS; i++) {
                 pythagoreanA2B2 += pow(sides[i], 2);
             }
-            sides[NUM_SIDES] = sqrt(pythagoreanA2B2);
+            sides[NUM_SIDES - 1] = sqrt(pythagoreanA2B2);
         }
         result = sides[s];
     }

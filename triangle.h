@@ -23,7 +23,6 @@
             double setSide(int, double); //sets a side length, given the index of the side & the desired length
             //Getters
             double getSide(int);
-            double getArea();
             double getPerimeter();
             //Methods
             void print();

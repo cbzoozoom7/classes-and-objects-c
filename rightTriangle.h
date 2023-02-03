@@ -9,7 +9,9 @@
     #include "triangle.h"
     
     class RightTriangle: public Triangle {
-        RightTriangle(double[2]);
-        double setSide(int, double);
+        public:
+            RightTriangle(double[2]);
+            double setSide(int, double);
+            double getArea();
     };
 #endif //CLASSES_RIGHTTRIANGLE

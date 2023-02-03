@@ -40,9 +40,6 @@ double Triangle::setSide(int s, double l) { //Sets a side length, given the inde
 double Triangle::getSide(int s) {
     return sides[s];
 }
-double Triangle::getArea() {
-    return .25*std::sqrt((4*pow(sides[0], 2)*pow(sides[1], 2))-pow((pow(sides[0], 2) + pow(sides[1], 2) - pow(sides[2],2)), 2)); //Heron's formula: 1/4 (4 a^2 b^2 - (a^2 + b^2 - c^2)^2)^(1/2)
-}
 double Triangle::getPerimeter() {
     double sum = 0;
     for (int i = 0; i < NUM_SIDES; i++) {
@@ -52,7 +49,7 @@ double Triangle::getPerimeter() {
 }
 void Triangle::print() {
     for (int i = 0; i < NUM_SIDES; i++) {
-        cout << "side " << i << ": " << getSide(i) << ", ";
+        cout << "side " << i << ": " << getSide(i) << ",\t";
     }
-    cout << "area: " << getArea() << ", perimeter: " << getPerimeter() << endl;
+    cout << "perimeter: " << getPerimeter() << endl;
 }

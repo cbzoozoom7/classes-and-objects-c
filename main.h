@@ -6,4 +6,5 @@
     #define CLASSES_MAIN
     #include "triangle.h"
     #include <iostream>
+    #include "rightTriangle.h"
 #endif //CLASSES_MAIN
