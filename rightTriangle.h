@@ -10,5 +10,6 @@
     
     class RightTriangle: public Triangle {
         RightTriangle(double[2]);
+        double setSide(int, double);
     };
 #endif //CLASSES_RIGHTTRIANGLE

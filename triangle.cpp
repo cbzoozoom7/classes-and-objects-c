@@ -14,7 +14,7 @@ Triangle::Triangle(double *lengths) {
     for (int i = 0; i < NUM_SIDES; i++) { //run the setter to validate
         setSide(i, sides[i]);
     }
-};
+}
 Triangle::Triangle() {
     
 }
