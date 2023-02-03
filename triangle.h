@@ -29,5 +29,6 @@
             void print();
         protected:
             double sides[3]; //the side lengths of the triangle
+            Triangle();
     };
 #endif //CLASSES_TRIANGLE

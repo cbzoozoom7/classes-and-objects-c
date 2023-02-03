@@ -15,6 +15,9 @@ Triangle::Triangle(double *lengths) {
         setSide(i, sides[i]);
     }
 };
+Triangle::Triangle() {
+    
+}
 double Triangle::setSide(int s, double l) { //Sets a side length, given the index of the side & the desired length. Returns what the value has been set to.
     double result;
     if (s < 0 || s >= NUM_SIDES) { //fail if index is invalid
