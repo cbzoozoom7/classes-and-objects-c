@@ -30,3 +30,11 @@ double RightTriangle::setSide(int s, double l) {
     }
     return result;
 }
+double RightTriangle::getArea() {
+    double area = 1;
+    for (int i = 0; i < NUM_LEGS; i++) { //yes, a for loop for multiplying 2 values together B)
+        area *= sides[i];
+    }
+    area *= .5;
+    return area;
+}

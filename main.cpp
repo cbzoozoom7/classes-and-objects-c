@@ -32,17 +32,17 @@ int main(int argc, char** argv) {
     RightTriangle myInvalidRight(invalidLengths);
     RightTriangle myDefaultRight(badValues);
     RightTriangle myThreeFourFive(threeFourFive);
-    cout << "Right Scaline:\t";
+    cout << "Right Scaline:\t Area: " << myRightScaline.getArea() << "\t";
     myRightScaline.print();
-    cout << "Right Isosceles:\t";
+    cout << "Right Isosceles:\t Area: " << myRightIsosceles.getArea() << "\t";
     myRightIsosceles.print();
-    cout << "Right \"Equilateral\":\t";
+    cout << "Right \"Equilateral\":\t Area: " << myOtherRightIsosceles.getArea() << "\t";
     myOtherRightIsosceles.print();
-    cout << "Right Invalid:\t";
+    cout << "Right Invalid:\t Area: " << myInvalidRight.getArea() << "\t";
     myInvalidRight.print();
-    cout << "Right Default:\t";
+    cout << "Right Default:\t Area: " << myDefaultRight.getArea() << "\t";
     myDefaultRight.print();
-    cout << "3 4 5:\t";
+    cout << "3 4 5:\t Area: " << myThreeFourFive.getArea() << "\t";
     myThreeFourFive.print();
     return 0;
 } 
